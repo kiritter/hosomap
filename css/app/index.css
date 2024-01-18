@@ -450,6 +450,9 @@ body {
 .tooltip-spot-point {
   background-color: #f0fbca;
 }
+.tooltip-nearby-spot-point {
+  background-color: #e2f7fd;
+}
 .tooltip-national-scenic-spot {
   background-color: #F8E6FF;
 }

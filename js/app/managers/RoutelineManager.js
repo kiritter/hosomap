@@ -16,6 +16,7 @@
             this.eventManager4 = new MyApp.MarkerEventManager(gaChannel, mapBoth, globalState, MyApp.globalConst.ChapterNum.UKIYO);
             this.placePointManager = new MyApp.MarkerPlacePointManager(null, mapBoth, globalState);
             this.spotPointManager = new MyApp.MarkerSpotPointManager(null, mapBoth, globalState);
+            this.nearbySpotPointManager = new MyApp.MarkerNearbySpotPointManager(null, mapBoth, globalState);
             this.nationalScenicSpotManager = new MyApp.MarkerNationalScenicSpotManager(null, mapBoth, globalState);
             this.touristSpotManager = new MyApp.MarkerTouristSpotManager(null, mapBoth, globalState);
 
@@ -53,6 +54,7 @@
             promiseList.push(this.eventManager4.init());
             promiseList.push(this.placePointManager.init());
             promiseList.push(this.spotPointManager.init());
+            promiseList.push(this.nearbySpotPointManager.init());
             promiseList.push(this.nationalScenicSpotManager.init());
             promiseList.push(this.touristSpotManager.init());
 
