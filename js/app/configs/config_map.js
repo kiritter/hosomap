@@ -157,7 +157,7 @@
             },
         },
         'route_place_point': {
-            caption: '本文に登場する歌枕や場所 (及び曾良随行日記/経由想定地)',
+            caption: '本文に登場する歌枕や場所、曾良随行日記/経由想定地',
             tileType: MyApp.configMap.TileType.Empty,
             options: {
                 minZoom: 5,
@@ -177,7 +177,7 @@
             },
         },
         'route_national_scenic_spot': {
-            caption: '国指定名勝：おくのほそ道の風景地 (2023年12月時点)',
+            caption: '国指定名勝：おくのほそ道の風景地 (2023/12時点)',
             tileType: MyApp.configMap.TileType.Empty,
             options: {
                 minZoom: 5,

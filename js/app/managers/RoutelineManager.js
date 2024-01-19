@@ -20,6 +20,7 @@
             this.nationalScenicSpotManager = new MyApp.MarkerNationalScenicSpotManager(null, mapBoth, globalState);
             this.touristSpotManager = new MyApp.MarkerTouristSpotManager(null, mapBoth, globalState);
 
+            this.pathOgakiKuwanaManager = new MyApp.EachPathAfterTripManager(mapBoth, globalState, '', 'geojson/10_path_point_event/20a_ogaki_kuwana.geojson');
             this.pathTokaidoManager = new MyApp.EachPathAfterTripManager(mapBoth, globalState, '', 'geojson/10_path_point_event/21a_tokaido.geojson');
             this.pathIsekaidoManager = new MyApp.EachPathAfterTripManager(mapBoth, globalState, '', 'geojson/10_path_point_event/22a_isekaido.geojson');
             this.pathFutamiManager = new MyApp.EachPathAfterTripManager(mapBoth, globalState, '', 'geojson/10_path_point_event/23a_futami.geojson');
@@ -27,6 +28,7 @@
             this.pathNarakaidoManager = new MyApp.EachPathAfterTripManager(mapBoth, globalState, '', 'geojson/10_path_point_event/25a_narakaido.geojson');
             this.pathHasekaidoManager = new MyApp.EachPathAfterTripManager(mapBoth, globalState, '', 'geojson/10_path_point_event/26a_hasekaido.geojson');
 
+            this.ogakiKuwanaStationPointManager = new MyApp.EachMarkerAfterTripStationPointManager(null, mapBoth, globalState, 'route_after_trip', 'geojson/10_path_point_event/20a_ogaki_kuwana.geojson');
             this.tokaidoStationPointManager = new MyApp.EachMarkerAfterTripStationPointManager(null, mapBoth, globalState, 'route_after_trip', 'geojson/10_path_point_event/21a_tokaido.geojson');
             this.isekaidoStationPointManager = new MyApp.EachMarkerAfterTripStationPointManager(null, mapBoth, globalState, 'route_after_trip', 'geojson/10_path_point_event/22a_isekaido.geojson');
             this.futamiStationPointManager = new MyApp.EachMarkerAfterTripStationPointManager(null, mapBoth, globalState, 'route_after_trip', 'geojson/10_path_point_event/23a_futami.geojson');
@@ -58,6 +60,8 @@
             promiseList.push(this.nationalScenicSpotManager.init());
             promiseList.push(this.touristSpotManager.init());
 
+            promiseList.push(this.pathOgakiKuwanaManager.init());
+            promiseList.push(this.ogakiKuwanaStationPointManager.init());
             promiseList.push(this.pathTokaidoManager.init());
             promiseList.push(this.tokaidoStationPointManager.init());
             promiseList.push(this.pathIsekaidoManager.init());
