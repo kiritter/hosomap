@@ -18,6 +18,7 @@
         {name: 'ort_old10', selected: false},
         {name: 'latest', selected: false},
         {name: 'hillshade', selected: true},
+        {name: 'pref_border', selected: false},
         {name: `route_event_${MyApp.globalConst.ChapterNum.MISOGI}`, selected: true},
         {name: `route_event_${MyApp.globalConst.ChapterNum.UTAMAKURA}`, selected: true},
         {name: `route_event_${MyApp.globalConst.ChapterNum.UNIVERSE}`, selected: true},
@@ -74,7 +75,6 @@
                 myLayerName: 'latest',
                 myCacheName: 'latest',
                 myCacheRepo: MyApp.globalCacheRepo,
-                addSeparatorToBottom: true,
             },
         },
         'hillshade': {
@@ -90,9 +90,9 @@
                 myLayerName: 'hillshade',
                 myCacheName: 'hillshade',
                 myCacheRepo: MyApp.globalCacheRepo,
-                blockDescription: '陰影起伏図を重ねて表示できます',
+                addSeparatorToBeforebegin: true,
+                blockDescription: '重ねて表示できます',
                 blockDescriptionCssClassName: 'block-description',
-                addSeparatorToBottom: true,
             },
         },
 
@@ -124,6 +124,7 @@
                 maxZoom: 18,
                 myLayerName: `route_event_${MyApp.globalConst.ChapterNum.MISOGI}`,
                 overlayMenuCssClassName: 'overlay-menu-misogi',
+                addSeparatorToBeforebegin: true,
                 blockDescription: '『おくのほそ道』の俳句を表示します（※参考文献の4部構成）',
                 blockDescriptionCssClassName: 'block-description',
             },
@@ -156,7 +157,6 @@
                 maxZoom: 18,
                 myLayerName: `route_event_${MyApp.globalConst.ChapterNum.UKIYO}`,
                 overlayMenuCssClassName: 'overlay-menu-ukiyo',
-                addSeparatorToBottom: true,
             },
         },
         'route_place_point': {
@@ -166,6 +166,7 @@
                 minZoom: 5,
                 maxZoom: 18,
                 myLayerName: 'route_place_point',
+                addSeparatorToBeforebegin: true,
                 blockDescription: '場所を表示します',
                 blockDescriptionCssClassName: 'block-description',
             },
@@ -214,11 +215,20 @@
                     },
                     {
                         sourceSummaryUrl: '../#product-map',
-                        sourceSummaryText: '当Webサイトの兄弟地図サイトを見る',
+                        sourceSummaryText: '当Webサイトの🗾兄弟地図サイトを見る',
                         sourceSummaryNote: '',
                         sourceSummaryCssClassName: 'source-summary-link',
                     },
                 ],
+            },
+        },
+        'pref_border': {
+            caption: '都道府県境 (目安, 2014年時点)',
+            tileType: MyApp.configMap.TileType.Empty,
+            options: {
+                minZoom: 5,
+                maxZoom: 18,
+                myLayerName: 'pref_border',
             },
         },
 
