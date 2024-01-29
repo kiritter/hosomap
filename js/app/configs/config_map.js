@@ -172,7 +172,7 @@
             },
         },
         'route_after_trip': {
-            caption: 'エピローグ：旅直後の関連場所 (伊勢街道 他)',
+            caption: 'エピローグ：大垣以降の関連場所 (伊勢街道 他)',
             tileType: MyApp.configMap.TileType.Empty,
             options: {
                 minZoom: 5,
